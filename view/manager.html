@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Staff Imformation</h2>
+    <table class="table">
+    <thead>
+      <tr>
+        <th>UserID</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Tags</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr ng-repeat="staff in staffs">
+  <td>{{staff.UserID}}</td>
+  <td>{{staff.Firstname}}</td>
+  <td>{{staff.Lastname}}</td>
+  <td>{{staff.Email}}</td>
+  <td>{{staff.Tags}}</td>
+</tr>
+    </tbody>
+  </table>
+</div>
