@@ -12,11 +12,11 @@
     </thead>
     <tbody>
 <tr ng-repeat="staff in staffs">
-  <td>{{staff.UserID}}</td>
-  <td>{{staff.Firstname}}</td>
-  <td>{{staff.Lastname}}</td>
-  <td>{{staff.Email}}</td>
-  <td>{{staff.Tags}}</td>
+  <td><input type="text" id="text_{{staff.UserID}}" ng-model="staff.UserID" class="active" readonly/></td>
+  <td><input type="text" id="text_{{staff.Firstname}}" ng-model="staff.Firstname" class="active"/></td>
+  <td><input type="text" id="text_{{staff.Lastname}}" ng-model="staff.Lastname" class="active"/></td>
+  <td><input type="text" id="text_{{staff.Email}}" ng-model="staff.Email" class="active" readonly/></td>
+  <td><input type="text" id="text_{{staff.Tags}}" ng-model="staff.Tags" class="active"/></td>
 </tr>
     </tbody>
   </table>
