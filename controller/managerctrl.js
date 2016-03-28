@@ -2,28 +2,28 @@ angular.module('manageSystem').controller('managerctrl',function($scope){
   $scope.readOnly = true
   $scope.staffs = [
     {
-      UserID:01,
+      UserID:1,
       Firstname:"Jammy",
       Lastname: "Lannister",
       Email:"Jammy@cb.com",
       Tags: "Handsome"
     },
     {
-      UserID:02,
+      UserID:2,
       Firstname:"Tyrion",
       Lastname: "Lannister",
       Email:"Tyrion@cb.com",
       Tags: "Imp"
     },
     {
-      UserID:03,
+      UserID:3,
       Firstname:"Dannis",
       Lastname: "Targarion",
       Email:"Dannis@cb.com",
       Tags: "Beauty"
     },
     {
-      UserID:04,
+      UserID:4,
       Firstname:"John",
       Lastname: "Snow",
       Email:"John@cb.com",
@@ -59,6 +59,9 @@ angular.module('manageSystem').controller('managerctrl',function($scope){
       $scope.staffs.splice(i, 1);
       break;
     }
+  }
+  for(var j=UserID-1; j<$scope.staffs.length; j++){
+     $scope.staffs[j].UserID = $scope.staffs[j].UserID -1;
   }
 };
 
