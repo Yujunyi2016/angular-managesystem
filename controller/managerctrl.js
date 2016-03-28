@@ -1,4 +1,5 @@
 angular.module('manageSystem').controller('managerctrl',function($scope){
+  $scope.readOnly = true
   $scope.staffs = [
     {
       UserID:01,
@@ -28,4 +29,37 @@ angular.module('manageSystem').controller('managerctrl',function($scope){
       Email:"John@cb.com",
       Tags: "Skin"
     }];
+
+
+    $scope.addStaff = function(){
+      $scope.staffs.push(
+        {
+          UserID: $scope.staffs.length+1,
+          Firstname:"Enter Firstname",
+          Lastname:"Enter Lastname",
+          Email:"Enter Email",
+          Tags: "Enter Tags"
+        });
+      $scope.readOnly = false;
+    };
+
+    $scope.editStaff = function(){
+      $scope.readOnly = false;
+    };
+
+    $scope.saveStaff = function(){
+      $scope.readOnly = true;
+    };
+
+    $scope.deleteStaff = function (UserID) {
+
+  for (var i = 0; i < $scope.staffs.length; i++) {
+    var staff = $scope.staffs[i];
+    if (staff.UserID == UserID) {
+      $scope.staffs.splice(i, 1);
+      break;
+    }
+  }
+};
+
 })
