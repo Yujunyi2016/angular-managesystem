@@ -1,15 +1,15 @@
 manageSystem.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/homepage', {
+      when('/', {
         templateUrl: 'view/homepage.html',
         controller: 'CarouselDemoCtrl'
       }).
-      when('/homepage/manager', {
+      when('/users', {
         templateUrl: 'view/manager.html',
-        controller: 'managerctrl'
+        controller: 'ManagerCtrl'
       }).
       otherwise({
-        redirectTo: '/homepage'
+        redirectTo: '/'
       });
   }]);

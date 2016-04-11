@@ -1,9 +1,23 @@
 <div>
-      <h1>Welcome to CB Manage System<h1>
-      <a href="#/homepage/manager">Go to managesystem</a>
-
-    <div ng-controller="CarouselDemoCtrl">
-    <div style="height: 305px">
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <h4 class="navbar-brand" href="#">Welcome </h4>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#/users">Managesystem</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div>
+    <div style="height: 300px">
       <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
         <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
           <img ng-src="{{slide.image}}" style="margin:auto;">
@@ -12,9 +26,6 @@
           </div>
         </uib-slide>
       </uib-carousel>
-    </div>
-      </div>
-
     </div>
   </div>
 </div>
